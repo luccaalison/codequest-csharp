@@ -36,8 +36,6 @@ git clone https://github.com/luccaalison/codequest-csharp.git
 cd codequest-csharp
 ```
 
-Se o repositório for privado, é preciso ter sido adicionado como colaborador no GitHub antes de conseguir clonar (o dono do repositório manda o convite).
-
 ## Rodando
 
 ```bash
