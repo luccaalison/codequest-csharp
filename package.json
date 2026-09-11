@@ -1,0 +1,18 @@
+{
+  "name": "codequest-csharp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Jogo de aprendizado de C# e .NET no estilo Duolingo, com quiz e desafios de código executados de verdade.",
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta -k \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "dotnet run --project server/CodeQuest.Api --no-launch-profile --urls http://localhost:5239",
+    "dev:web": "npm --prefix web run dev",
+    "build": "npm --prefix web run build && dotnet build server/CodeQuest.Api",
+    "typecheck": "npm --prefix web run typecheck",
+    "check:content": "npm --prefix web run check:content",
+    "setup": "npm --prefix web install && dotnet build server/CodeQuest.Api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
